@@ -1,0 +1,66 @@
+---
+import WhirligigBird from "../components/Home/WhirligigBird.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "About";
+const description = "About your blog.";
+const permalink = `${Astro.site?.href}about`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  permalink={permalink}
+  current="about"
+>
+  <div class="container relative">
+    <h1>About</h1>
+    <div class="float-right p-8">
+      <WhirligigBird />
+    </div>
+    <p>
+      Whirligig Labs started as an umbrella for various apps and ideas from the
+      founding team. From there, the team started focusing on growing more than
+      just their own ideas.
+    </p>
+    <p>
+      Solo entrepreneurs, seed-level founding teams, and more can now benefit
+      from working within the Whirligig umbrella. Our core focus is software,
+      but select hardware based projects are still on the radar.
+    </p>
+    <p>
+      Are you a potential investor? We can accommodate various proposals and
+      spin any project out into its own entity to facilitate easier investment
+      opportunities.
+    </p>
+    <p>
+      Would you like to be a partner project? We are not currently accepting new
+      partners at the moment. However, please contact us if you think you are a
+      good fit anyway.
+    </p>
+    <p>
+      We also have a firm commitment to open source software and contributing
+      back to the awesome work that helped get us to where we are.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-image {
+    float: right;
+    margin: -3em -7em 2em 2em;
+    max-width: 300px;
+  }
+
+  .about-image img {
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+  }
+
+  @media (max-width: 1020px) {
+    .about-image {
+      float: none;
+      margin: 0 auto 2em;
+    }
+  }
+</style>

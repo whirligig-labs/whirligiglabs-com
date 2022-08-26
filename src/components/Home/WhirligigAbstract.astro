@@ -1,0 +1,42 @@
+<div class="relative h-[600px] w-[600px] z-0">
+  {
+    new Array(12).fill("").map((_, index) => (
+      <div
+        style={{ transform: `rotate(${index * 30}deg)` }}
+        class="absolute top-0 left-0 right-0 bottom-0 animate-spin transform-gpu z-0"
+      >
+        <div class="relative h-[600px] w-[600px]  border-gray-400 border-2 animate-fade rounded-[1rem] transform-gpu z-0" />
+      </div>
+    ))
+  }
+</div>
+<style>
+  .animate-fade {
+    animation: customfade 30s linear infinite,
+      customscale 30s ease-in-out infinite;
+  }
+
+  @keyframes customfade {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes customscale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.42);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>

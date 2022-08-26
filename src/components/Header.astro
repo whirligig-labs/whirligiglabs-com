@@ -1,0 +1,30 @@
+---
+import Logo from "./Logo.astro";
+import Nav from "./Nav.astro";
+
+const { current = "" } = Astro.props;
+---
+
+<style>
+  header {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 2em;
+    width: 100%;
+  }
+</style>
+
+<header class="z-10 bg-[rgba(42,45,52,0.8)]">
+  <div class="flex flex-row">
+    <div>
+      <Logo />
+    </div>
+    <div>
+      <h2 class="m-0 ml-8">
+        Whirligig <span class="block text-yellow mt-[-8px]">Labs</span>
+      </h2>
+    </div>
+  </div>
+  <Nav current={current} />
+</header>

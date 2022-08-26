@@ -1,0 +1,23 @@
+---
+import BirdBackImage from "../../public/bird-back-wing.svg";
+import BirdFrontImage from "../../public/bird-front-wing.svg";
+import BirdBodyImage from "../../public/bird-body.svg";
+---
+
+<div class="relative h-[300px] w-[300px]">
+  <div
+    class="absolute top-0 left-0 right-0 bottom-0 animate-reverse-spin flex items-center justify-center"
+  >
+    <img src={BirdBackImage} />
+  </div>
+  <div
+    class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center"
+  >
+    <img src={BirdBodyImage} />
+  </div>
+  <div
+    class="absolute top-0 left-0 right-0 bottom-0 animate-spin flex items-center justify-center"
+  >
+    <img src={BirdFrontImage} />
+  </div>
+</div>
