@@ -2,6 +2,7 @@
 title: Hello World
 publishDate: 25 Aug 2022
 description: We are live!! Check out some of our projects and blog posts.
+slug: hello-world-2
 ---
 
 Whirligig Labs is a reality. We plan on releasing a multitude of useful and profitable projects to delight users everywhere.

@@ -1,14 +1,10 @@
-import readingTime from 'reading-time'
+import readingTime from "reading-time";
+import type { BlogPost } from "../types";
 
-type Post = {
-  title: string
-  file: string
-  rawContent: () => string
-}
-
-export default function getPostData(post: Post) {
+export default function getPostData(post: BlogPost) {
   return {
-    slug: post.file.split('/').pop().split('.').shift(),
+    slug:
+      post.frontmatter.slug || post.file.split("/").pop()?.split(".").shift(),
     readingTime: readingTime(post.rawContent()).text,
-  }
+  };
 }
