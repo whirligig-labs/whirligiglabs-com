@@ -8,7 +8,9 @@ const { projects } = Astro.props;
   {
     projects.map((project: Project) => (
       <div class="w-full md:w-1/3 p-4">
-        <h4>{project.frontmatter.title}</h4>
+        <a target="_blank" href={project.frontmatter.url}>
+          <h4>{project.frontmatter.title}</h4>
+        </a>
         <p>{project.frontmatter.description}</p>
       </div>
     ))

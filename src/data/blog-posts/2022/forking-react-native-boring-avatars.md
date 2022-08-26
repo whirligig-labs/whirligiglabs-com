@@ -32,4 +32,4 @@ In the process of making my changes, we altered a bunch of the build processes a
 
 ## Wrapping Up
 
-We hope you can find this post useful and we also hope you might find our port of `react-native-boring-avatars` useful.
+We hope you can find this post useful and we also hope you might find our port of [react-native-boring-avatars](https://github.com/whirligig-labs/react-native-boring-avatars) useful.

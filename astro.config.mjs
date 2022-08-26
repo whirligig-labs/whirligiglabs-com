@@ -10,7 +10,7 @@ export default defineConfig({
   integrations: [mdx(), solid(), tailwind()],
   markdown: {
     shikiConfig: {
-      theme: "nord",
+      theme: "monokai",
     },
     rehypePlugins: [
       [
