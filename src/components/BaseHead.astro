@@ -1,6 +1,6 @@
 ---
-import '../styles/fonts.css'
-import '../styles/global.css'
+import "../styles/fonts.css";
+import "../styles/global.css";
 
 export interface Props {
   title: string;
@@ -9,14 +9,13 @@ export interface Props {
 }
 
 const { title, description, permalink } = Astro.props;
-const socialUrl = Astro.site.href + 'assets/social.png'
+const socialUrl = Astro.site.href + "assets/social.png";
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -36,14 +35,24 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={socialUrl} />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#009ddc" />
+<meta name="msapplication-TileColor" content="#009ddc" />
+<meta name="theme-color" content="#009ddc" />
 
 <!-- This is intentionally inlined to avoid FOUC -->
 <script>
   const root = document.documentElement;
-  const theme = localStorage.getItem('theme');
-  if (theme === 'dark' || (!theme) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    root.classList.add('theme-dark');
+  const theme = localStorage.getItem("theme");
+  if (
+    theme === "dark" ||
+    (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    root.classList.add("theme-dark");
   } else {
-    root.classList.remove('theme-dark');
+    root.classList.remove("theme-dark");
   }
 </script>
