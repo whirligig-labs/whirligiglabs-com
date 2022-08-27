@@ -20,8 +20,6 @@ const { current = "" } = Astro.props;
     padding: 10px 5px;
     display: block;
     position: relative;
-    margin-left: 20px;
-    min-width: 70px;
     text-align: center;
   }
 
@@ -56,10 +54,13 @@ const { current = "" } = Astro.props;
 </style>
 
 <nav>
-  <a class={current === "" ? "selected" : ""} href="/">home</a>
-  <a class={current === "about" ? "selected" : ""} href="/about">about</a>
-  <a class={current === "blog" ? "selected" : ""} href="/blog">blog</a>
-  <div class="theme-toggle-container">
-    <!-- <ThemeToggleButton client:load /> -->
-  </div>
+  <a class={`min-w-[60px] ${current === "" ? "selected" : ""}`} href="/">home</a
+  >
+  <a
+    class={`min-w-[80px] ${current === "about" ? "selected" : ""}`}
+    href="/about">about</a
+  >
+  <a class={`min-w-[60px] ${current === "blog" ? "selected" : ""}`} href="/blog"
+    >blog</a
+  >
 </nav>
